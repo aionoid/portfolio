@@ -4,7 +4,7 @@
     <br /><br />
     <div v-for="(project, index) in allProjects">
       <Project
-        v-show="index < 3 * projectIndex"
+        v-show="index < 6 * projectIndex"
         :index="index"
         class="mb-20"
         :project="project"
@@ -42,6 +42,8 @@ const store = useMainStore()
 type Project = {
   name: string
   imageSrc: string
+  typeExt: string
+  totalCount: number
   description: string
   toolsUsed: string[]
   demoLink: string
@@ -52,7 +54,9 @@ let projectIndex = ref<number>(1)
 let allProjects: Project[] = [
   {
     name: "Evolve OS",
-    imageSrc: "/portfolio/eos/1.png",
+    imageSrc: "/portfolio/eos/",
+    typeExt:".png",
+    totalCount:4,
     description:
 "Evolve OS، هو توزيعة Linux مصممة خصيصًا للفضاء السيبراني للمكتبات، ويمكن التحكم فيها من خلال خادم، تمامًا مثل EasyCafe",
     toolsUsed: ["Shell", "Python", "Vuejs", "Javascript","Dart","Html","Flutter","Postgresql"],
@@ -61,7 +65,9 @@ let allProjects: Project[] = [
   },
   {
     name: "SOS OS",
-    imageSrc: "/portfolio/aos/1.png",
+    imageSrc: "/portfolio/aos/",
+    typeExt:".png",
+    totalCount:6,
     description:
     "نضام تشغيل مصغر, مخصص للبحث او للاشهارات, يقوم فقط بفتح صفحة ويب عن طريق برنامج SOS-OS",
     toolsUsed: ["C++", "Shell","Python"],
@@ -70,7 +76,9 @@ let allProjects: Project[] = [
   },
   {
     name: "SOS-Admin",
-    imageSrc: "/portfolio/sos_admin/1.png",
+    imageSrc: "/portfolio/sos_admin/",
+    typeExt:".png",
+    totalCount:9,
     description:
     "sos-admin، هو البرنامج المسؤول عن التحكم في نظام sos، الذي يمكنه تشغيل/إيقاف  أجهزة الكمبيوترالمحتوية علي sos-os من الشبكة.  و التحكم في ما يظهر على الشاشة.",
     toolsUsed: ["Php", "Python", "Postgresql", "WAMP","WebSocket","Javascript"],
@@ -78,17 +86,10 @@ let allProjects: Project[] = [
     githubLink: "https://github.com/Ara-O/Minim-React"
   },
   {
-    name: "وسيطي",
-    imageSrc: "/portfolio/wassiti_app/1.png",
-    description:
-    "Wassiti تطبيق عبارة عن شبكة اجتماعية للحرفين  ولحل مشاكلهم الإدارية من المنزل. ومساعدتهم في العثور على عمل وبيع المنتجاتهم.",
-    toolsUsed: ["Dart", "Flutter"],
-    demoLink: "https://budgeting-site.netlify.app",
-    githubLink: "https://github.com/Ara-O/Budget-App"
-  },
-  {
     name: "EParking",
-    imageSrc: "/portfolio/eparking/1.jpg",
+    imageSrc: "/portfolio/eparking/",
+    typeExt:".jpg",
+    totalCount:11,
     description:
     "Eparking هو تطبيق هاتفي يحل مشكلة مواقف السيارات للشركات وموظفيها",
     toolsUsed: ["Dart", "Flutter","FireBase","WAMP"],
@@ -97,12 +98,25 @@ let allProjects: Project[] = [
   },
   {
     name: "محرك بحث الكتب",
-    imageSrc: "/portfolio/book_search/1.jpg",
+    imageSrc: "/portfolio/book_search/",
+    typeExt:".jpg",
+    totalCount:12,
     description:
     "EFindBook هو تطبيق ويب للبحث عن الكتب، ويستخدم واجهة Syngeb الخلفية، ويستخدم قاعدة بيانات OpenSearch للبحث بسرعة .",
     toolsUsed: ["Vue.js", "ElasticSearch","MySql","Python","HTML","CSS","Tailwind","Javascript"],
     demoLink: "https://animesfinder.netlify.app",
     githubLink: "https://github.com/Ara-O/Anime_Finder"
+  },
+  {
+    name: "وسيطي",
+    imageSrc: "/portfolio/wassiti_app/",
+    typeExt:".png",
+    totalCount:16,
+    description:
+    "Wassiti تطبيق عبارة عن شبكة اجتماعية للحرفين  ولحل مشاكلهم الإدارية من المنزل. ومساعدتهم في العثور على عمل وبيع المنتجاتهم.",
+    toolsUsed: ["Dart", "Flutter"],
+    demoLink: "https://budgeting-site.netlify.app",
+    githubLink: "https://github.com/Ara-O/Budget-App"
   },
   //{
   //  name: "Project Fit",

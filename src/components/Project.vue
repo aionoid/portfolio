@@ -1,13 +1,13 @@
 <template>
   <article class="flex gap-20 items-start project">
     <article class="h-auto w-[38rem]">
-      <img
-        :src="getImg(props.project.imageSrc)"
-        alt="Project image"
-        loading="lazy"
-        class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition"
-        :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
-      />
+      <!-- <img -->
+      <!--   :src="getImg(props.project.imageSrc)" -->
+      <!--   alt="Project image" -->
+      <!--   loading="lazy" -->
+      <!--   class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition" -->
+      <!--   :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'" -->
+      <!-- /> -->
       <!-- <span class="flex mt-12 demo-github-link"> -->
       <!--   <a :href="props.project.demoLink" target="_blank"> -->
       <!--     <button -->
@@ -24,6 +24,46 @@
       <!--     </button> -->
       <!--   </a> -->
       <!-- </span> -->
+    <Carousel id="gallery" :autoplay="2000" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
+      <Slide v-for="slide in props.project.totalCount" :key="slide">
+        <div class="carousel__item h-30">
+          <!-- {{ slide }} -->
+        <img
+            :src="getImg(props.project.imageSrc + slide + props.project.typeExt)"
+          alt="Project image"
+          loading="lazy"
+          class="hover:grayscale-0 duration-300 rounded-lg h-200 w-[600px] object-contain transition"
+          :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
+        />
+        </div>
+      </Slide>
+      <template #addons>
+        <Pagination />
+        <Navigation />
+      </template>
+    </Carousel>
+
+    <Carousel
+      id="thumbnails"
+      :items-to-show="4"
+      :wrap-around="true"
+      v-model="currentSlide"
+      ref="carousel"
+    >
+      <Slide v-for="slide in props.project.totalCount" :key="slide">
+        <div class="carousel__item px-5 py-2" @click="slideTo(slide - 1)">
+        <!-- <div class="carousel__item px-5 py-2" @click="fakefunc()"> -->
+        <img
+            :src="getImg(props.project.imageSrc + slide + props.project.typeExt)"
+          alt="Project image"
+          loading="lazy"
+          class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition"
+          :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
+        />
+        </div>
+      </Slide>
+    </Carousel>
+
     </article>
     <article class="text-white h-auto">
       <h3 class="text-3xl">{{ props.project.name }}</h3>
@@ -46,10 +86,46 @@
 
 <script lang="ts" setup>
 import useMainStore from "@/stores/main"
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
+import { defineComponent } from 'vue'
+
+defineComponent({
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+//  data() {
+//    return {
+//    currentSlide: 0,
+//    }
+//  },
+//  methods: {
+//    slideTo(val) {
+//      this.currentSlide = val
+//      console.log(val)
+//    },
+//    fakefunc() {
+//      console.log("i am here")
+//    },
+//  },
+});
+
+var currentSlide = 1
+
+function slideTo(val) {
+      currentSlide = val
+      console.log(currentSlide)
+}
 
 type Project = {
   name: string
   imageSrc: string
+  typeExt: string
+  totalCount: number
   description: string
   toolsUsed: string[]
   demoLink: string
