@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color: white !important;
+  overflow-x: hidden;
+  /* background-color: black; */
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: black;
+  font-family: "Righteous", "sans-serif";
+  /* cursor: none; */
+  padding-top: 1.5rem /* 24px */;
+  padding-bottom: 1.5rem /* 24px */;
+  padding-left: 3rem /* 48px */;
+  padding-right: 3rem /* 48px */;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
+
+.colored-text {
+  /* font-size: 96px; */
+  animation: ColorRotate 25s linear infinite;
+  background: -webkit-linear-gradient(45deg, rgb(0, 81, 255), rgb(120, 56, 162));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.colored-button-border {
+  background-clip: padding-box; /* !importanté */
+  background: initial;
+  border: solid 1px transparent;
+  color: white;
+}
+
+.colored-button-border:hover {
+  background-color: initial !important;
+}
+.colored-button-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  animation: ColorRotate 25s linear infinite;
+  background: linear-gradient(to right, rgb(0, 81, 255), rgb(120, 56, 162));
+}
+
+@keyframes ColorRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  70% {
+    filter: hue-rotate(360deg);
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+@media (max-width: 1650px) {
+  #about-me-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 1420px) {
+  #about-me-section section {
+    justify-content: center;
+    text-align: center;
+    gap: 100px;
+  }
+
+  #about-me-section section ul {
+    list-style-type: none;
+  }
+
+  .skills {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skills img {
+    width: 3.3rem;
+  }
+
+  .project {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1300px) {
+  .project {
+    text-align: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .demo-github-link {
+    justify-content: center;
+  }
+
+  .tools {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .chess-image {
+    display: none;
+  }
+
+  .hero-article {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-card-container {
+    width: auto;
+  }
+
+  .navbar-items {
+    display: none;
+  }
+}
+
+@media (max-width: 605px) {
+  .business-card-container img {
+    display: none;
+  }
+
+  .circle-cursor {
+    display: none;
+  }
+  .hero-article h3 {
+    font-size: 3rem;
+  }
+  .hero-article h5 {
+    font-size: 13px;
+    padding: 0px 25px;
+    text-align: center;
+  }
+
+  #about-me-section {
+    padding: 0px;
+    border: solid 2px black;
+    margin: 0px;
+  }
+
+  #contact-me-section div {
+    align-items: center;
+    justify-content: center;
+  }
+}
