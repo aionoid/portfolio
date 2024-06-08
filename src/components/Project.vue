@@ -1,29 +1,6 @@
 <template>
   <article class="flex gap-20 items-start project">
     <article class="h-auto w-[38rem]">
-      <!-- <img -->
-      <!--   :src="getImg(props.project.imageSrc)" -->
-      <!--   alt="Project image" -->
-      <!--   loading="lazy" -->
-      <!--   class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition" -->
-      <!--   :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'" -->
-      <!-- /> -->
-      <!-- <span class="flex mt-12 demo-github-link"> -->
-      <!--   <a :href="props.project.demoLink" target="_blank"> -->
-      <!--     <button -->
-      <!--       class="border border-white w-32 px-5 h-12 z-10 text-sm duration-200 hover:bg-white hover:text-black transition" -->
-      <!--     > -->
-      <!--       View Demo -->
-      <!--     </button> -->
-      <!--   </a> -->
-      <!--   <a :href="props.project.githubLink" target="_blank"> -->
-      <!--     <button -->
-      <!--       class="border border-white w-32 px-5 h-12 text-sm duration-200 hover:bg-white hover:text-black transition" -->
-      <!--     > -->
-      <!--       View Github -->
-      <!--     </button> -->
-      <!--   </a> -->
-      <!-- </span> -->
     <Carousel id="gallery" :autoplay="2000" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
       <Slide v-for="slide in props.project.totalCount" :key="slide">
         <div class="carousel__item h-30">
@@ -98,25 +75,22 @@ defineComponent({
     Pagination,
     Navigation,
   },
-//  data() {
-//    return {
-//    currentSlide: 0,
-//    }
-//  },
-//  methods: {
-//    slideTo(val) {
-//      this.currentSlide = val
-//      console.log(val)
-//    },
-//    fakefunc() {
-//      console.log("i am here")
-//    },
-//  },
+  data() {
+    return {
+    currentSlide: 0,
+    }
+  },
+  methods: {
+    slideTo(val:number ) {
+      this.currentSlide = val
+      console.log(val)
+    },
+  },
 });
 
 var currentSlide = 1
 
-function slideTo(val) {
+function slideTo(val:number ) {
       currentSlide = val
       console.log(currentSlide)
 }
