@@ -10,7 +10,7 @@
       <span
         class="h-5 w-10 top-[-20px] inline-block rounded-full bg-black border border-white relative"
       ></span>
-      احصائي
+      مهندس إحصاء
     </h3>
     <!-- <h3
       :class="store.coloredSite ? 'colored-text' : ''"

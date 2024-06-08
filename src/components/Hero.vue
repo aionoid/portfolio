@@ -10,7 +10,7 @@
     <article class="hero-article">
       <h3 class="text-7xl">بلعورة يعقوب</h3>
       <h5 class="text-sm font-['Poppins'] mt-7 w-[400px] leading-7">
-مرحبًا، أنا يعقوب أعمل كخبير إحصائي، وأقوم بتطوير تطبيقات للجوال والويب وسطح المكتب وأنا من محبي Linux منذ عام 2005
+مرحبًا، أنا يعقوب أعمل كمهندس إحصاء، وأقوم بتطوير تطبيقات للجوال والويب وسطح المكتب وأنا من محبي Linux منذ عام 2005
       </h5>
 
       <!-- //TODO: add youtube -->
@@ -22,7 +22,7 @@
               ? 'border-white'
               : 'relative colored-button-border hover:text-white hover'
           "
-          class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-7 rounded-full bg-black text-white transition-colors"
+          class="hover:bg-white border hover:text-black  text-[13px] px-6 py-3 font-medium mt-7 rounded-full bg-black text-white transition-colors"
         >
            مشاريعي السابقة
         </button>

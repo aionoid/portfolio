@@ -1,6 +1,6 @@
 <template>
   <section class="mt-20 text-white" id="projects-section">
-    <h2 class="text-5xl">Projects</h2>
+    <h2 class="text-5xl">المشاريع</h2>
     <br /><br />
     <div v-for="(project, index) in allProjects">
       <Project
@@ -24,10 +24,10 @@
       </button> -->
       <button
         v-if="projectIndex < Math.ceil(allProjects.length / 3)"
-        class="border rounded-full w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
+        class="border rounded-full w-48 px-5 h-12  text-sm hover:bg-white hover:text-black relative z-10 transition"
         @click="viewNextProject"
       >
-        View More Projects
+        المزيد من المشاريع
       </button>
     </article>
   </section>
@@ -51,76 +51,76 @@ type Project = {
 let projectIndex = ref<number>(1)
 let allProjects: Project[] = [
   {
-    name: "بسم الله الرحمان الرحيم",
-    imageSrc: "/udm-reimbursement-project-image.webp",
+    name: "Evolve OS",
+    imageSrc: "/portfolio/eos/1.png",
     description:
-      "I collaborated with three classmates on a project to enhance the reimbursement system for the College of Engineering at the University of Detroit Mercy. Our goal was to create a more efficient and user-friendly system for generating reimbursement documents for faculty purchases.",
-    toolsUsed: ["Vue.js", "Node.js", "Express", "Mongo DB"],
+"Evolve OS، هو توزيعة Linux مصممة خصيصًا للفضاء السيبراني للمكتبات، ويمكن التحكم فيها من خلال خادم، تمامًا مثل EasyCafe",
+    toolsUsed: ["Shell", "Python", "Vuejs", "Javascript","Dart","Html","Flutter","Postgresql"],
     demoLink: "https://udm-reimbursement-project.vercel.app",
     githubLink: "https://github.com/Ara-O/UDM-Reimbursement-Project"
   },
   {
-    name: "Children Association Tests",
-    imageSrc: "/implicit-association-tests-image.webp",
+    name: "SOS OS",
+    imageSrc: "/portfolio/aos/1.png",
     description:
-      "Collaborated with the assistant professor of psychology at the University of Detroit Mercy to develop a website that includes several tests to measure and gather data on implicit gender and racial biases in children.",
-    toolsUsed: ["Vue.js", "Firebase"],
+    "نضام تشغيل مصغر, مخصص للبحث او للاشهارات, يقوم فقط بفتح صفحة ويب عن طريق برنامج SOS-OS",
+    toolsUsed: ["C++", "Shell","Python"],
     demoLink: "https://children-association-tests.netlify.app",
     githubLink: "https://github.com/Ara-O/Association-Tests"
   },
   {
-    name: "Minim",
-    imageSrc: "/minim-image.webp",
+    name: "SOS-Admin",
+    imageSrc: "/portfolio/sos_admin/1.png",
     description:
-      "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
-    toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
+    "sos-admin، هو البرنامج المسؤول عن التحكم في نظام sos، الذي يمكنه تشغيل/إيقاف  أجهزة الكمبيوترالمحتوية علي sos-os من الشبكة.  و التحكم في ما يظهر على الشاشة.",
+    toolsUsed: ["Php", "Python", "Postgresql", "WAMP","WebSocket","Javascript"],
     demoLink: "https://minim-react.vercel.app/",
     githubLink: "https://github.com/Ara-O/Minim-React"
   },
   {
-    name: "Budgeting Site",
-    imageSrc: "/budgeting-site-image.webp",
+    name: "وسيطي",
+    imageSrc: "/portfolio/wassiti_app/1.png",
     description:
-      "I created a website that can be used to track user expenses, income, bills, and money/spending goals. The website uses firebase's realtime database and authentication to keep track of user data.",
-    toolsUsed: ["Nuxt.js", "Firebase"],
+    "Wassiti تطبيق عبارة عن شبكة اجتماعية للحرفين  ولحل مشاكلهم الإدارية من المنزل. ومساعدتهم في العثور على عمل وبيع المنتجاتهم.",
+    toolsUsed: ["Dart", "Flutter"],
     demoLink: "https://budgeting-site.netlify.app",
     githubLink: "https://github.com/Ara-O/Budget-App"
   },
   {
-    name: "Windows 10 Clone",
-    imageSrc: "/windows-clone-image.webp",
+    name: "EParking",
+    imageSrc: "/portfolio/eparking/1.jpg",
     description:
-      "Created in memory of my use of windows 10. This is a clone of the basic Windows 10 layout; From the lock screen and password page, to the home screen with moveable icons.",
-    toolsUsed: ["Vue.js"],
+    "Eparking هو تطبيق هاتفي يحل مشكلة مواقف السيارات للشركات وموظفيها",
+    toolsUsed: ["Dart", "Flutter","FireBase","WAMP"],
     demoLink: "https://windows10clone.netlify.app",
     githubLink: "https://github.com/Ara-O/Windows10-mock"
   },
   {
-    name: "Anime finder",
-    imageSrc: "/animes-finder-image.webp",
+    name: "محرك بحث الكتب",
+    imageSrc: "/portfolio/book_search/1.jpg",
     description:
-      "A side project to help users serch for, read more about, and find different animes of different genres",
-    toolsUsed: ["Vue.js", "Firebase"],
+    "EFindBook هو تطبيق ويب للبحث عن الكتب، ويستخدم واجهة Syngeb الخلفية، ويستخدم قاعدة بيانات OpenSearch للبحث بسرعة .",
+    toolsUsed: ["Vue.js", "ElasticSearch","MySql","Python","HTML","CSS","Tailwind","Javascript"],
     demoLink: "https://animesfinder.netlify.app",
     githubLink: "https://github.com/Ara-O/Anime_Finder"
   },
-  {
-    name: "Project Fit",
-    imageSrc: "/project-fit-image.webp",
-    description:
-      "Project Fit is a website that can be used to generate random exercises with sets and repetitions. The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.",
-    toolsUsed: ["Vue.js"],
-    demoLink: "https://project-fit.netlify.app",
-    githubLink: "https://github.com/Ara-O/Project_Fit"
-  },
-  {
-    name: "This portfolio :D",
-    imageSrc: "/portfolio-image.webp",
-    description: "My personal portfolio.",
-    toolsUsed: ["Vue.js", "Three.js"],
-    demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley",
-    githubLink: "https://github.com/Ara-O/Portfolio"
-  }
+  //{
+  //  name: "Project Fit",
+  //  imageSrc: "/portfolio/project-fit-image.webp",
+  //  description:
+  //    "Project Fit is a website that can be used to generate random exercises with sets and repetitions. The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.",
+  //  toolsUsed: ["Vue.js"],
+  //  demoLink: "https://project-fit.netlify.app",
+  //  githubLink: "https://github.com/Ara-O/Project_Fit"
+  //},
+  //{
+  //  name: "This portfolio :D",
+  //  imageSrc: "/portfolio-image.webp",
+  //  description: "My personal portfolio.",
+  //  toolsUsed: ["Vue.js", "Three.js"],
+  //  demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley",
+  //  githubLink: "https://github.com/Ara-O/Portfolio"
+  //}
 ]
 
 function viewNextProject() {

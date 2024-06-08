@@ -3,7 +3,7 @@
     <span>
       <!-- <img src="/my-logo.webp" class="w-10" alt="My logo" /> -->
     </span>
-    <span class="navbar-items text-white text-sm font-['Poppins'] flex items-center gap-x-20">
+    <span class="navbar-items text-white text-sm flex items-center gap-x-20">
       <a href="#about-me-section"> <h4 class="cursor-pointer">حول</h4></a>
       <a href="#projects-section"> <h4 class="cursor-pointer">مشاريعي</h4></a>
       <a href="#contact-me-section"><h4 class="cursor-pointer">تواصل</h4></a>

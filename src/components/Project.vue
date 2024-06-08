@@ -8,30 +8,30 @@
         class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition"
         :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
       />
-      <span class="flex mt-12 demo-github-link">
-        <a :href="props.project.demoLink" target="_blank">
-          <button
-            class="border border-white w-32 px-5 h-12 font-['Poppins'] z-10 text-sm duration-200 hover:bg-white hover:text-black transition"
-          >
-            View Demo
-          </button>
-        </a>
-        <a :href="props.project.githubLink" target="_blank">
-          <button
-            class="border border-white w-32 px-5 h-12 font-['Poppins'] text-sm duration-200 hover:bg-white hover:text-black transition"
-          >
-            View Github
-          </button>
-        </a>
-      </span>
+      <!-- <span class="flex mt-12 demo-github-link"> -->
+      <!--   <a :href="props.project.demoLink" target="_blank"> -->
+      <!--     <button -->
+      <!--       class="border border-white w-32 px-5 h-12 z-10 text-sm duration-200 hover:bg-white hover:text-black transition" -->
+      <!--     > -->
+      <!--       View Demo -->
+      <!--     </button> -->
+      <!--   </a> -->
+      <!--   <a :href="props.project.githubLink" target="_blank"> -->
+      <!--     <button -->
+      <!--       class="border border-white w-32 px-5 h-12 text-sm duration-200 hover:bg-white hover:text-black transition" -->
+      <!--     > -->
+      <!--       View Github -->
+      <!--     </button> -->
+      <!--   </a> -->
+      <!-- </span> -->
     </article>
     <article class="text-white h-auto">
       <h3 class="text-3xl">{{ props.project.name }}</h3>
-      <h4 class="mt-4 w-auto max-w-[500px] font-['Poppins'] text-[15px] font-light leading-7">
+      <h4 class="mt-4 w-auto max-w-[500px] text-[15px] font-light leading-7">
         {{ props.project.description }}
       </h4>
       <br />
-      <h4 class="font-['Poppins'] font-medium">Tools Used</h4>
+      <h4 class="font-medium">الادوات المستخدمة</h4>
       <div class="flex w-auto max-w-[500px] tools flex-wrap mt-8 gap-y-5">
         <div
           class="border flex items-center w-auto justify-center h-10 mr-5 text-white px-6 py-2 rounded-full font-['Poppins'] text-[13px]"
