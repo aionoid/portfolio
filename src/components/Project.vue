@@ -1,12 +1,14 @@
 <template>
   <article class="flex gap-20 items-start project">
     <article class="h-auto w-[38rem]">
-    <Carousel id="gallery" :autoplay="2000" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
+
+    <!-- Main Carousel for solo Item-->
+    <Carousel id="gallery" :autoplay="props.project.timeSwitch" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
       <Slide v-for="slide in props.project.totalCount" :key="slide">
         <div class="carousel__item h-30">
           <!-- {{ slide }} -->
         <img
-            :src="getImg(props.project.imageSrc + slide + props.project.typeExt)"
+          :src="getImg(props.project.imageSrc + slide + props.project.typeExt)"
           alt="Project image"
           loading="lazy"
           class="hover:grayscale-0 duration-300 rounded-lg h-200 w-[600px] object-contain transition"
@@ -20,6 +22,7 @@
       </template>
     </Carousel>
 
+    <!-- Small Carousel for all items -->
     <Carousel
       id="thumbnails"
       :items-to-show="4"
@@ -40,7 +43,7 @@
         </div>
       </Slide>
     </Carousel>
-
+    <!-- Project Side Info -->
     </article>
     <article class="text-white h-auto">
       <h3 class="text-3xl">{{ props.project.name }}</h3>
@@ -66,7 +69,7 @@ import useMainStore from "@/stores/main"
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-import { defineComponent } from 'vue'
+import { defineComponent, ref} from 'vue'
 
 defineComponent({
   components: {
@@ -75,23 +78,12 @@ defineComponent({
     Pagination,
     Navigation,
   },
-  data() {
-    return {
-    currentSlide: 0,
-    }
-  },
-  methods: {
-    slideTo(val:number ) {
-      this.currentSlide = val
-      console.log(val)
-    },
-  },
 });
 
-var currentSlide = 1
+const currentSlide = ref(1)
 
 function slideTo(val:number ) {
-      currentSlide = val
+      currentSlide.value = val
       console.log(currentSlide)
 }
 
@@ -100,6 +92,7 @@ type Project = {
   imageSrc: string
   typeExt: string
   totalCount: number
+  timeSwitch: number
   description: string
   toolsUsed: string[]
   demoLink: string

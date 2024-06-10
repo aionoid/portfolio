@@ -44,6 +44,7 @@ type Project = {
   imageSrc: string
   typeExt: string
   totalCount: number
+  timeSwitch: number
   description: string
   toolsUsed: string[]
   demoLink: string
@@ -57,6 +58,7 @@ let allProjects: Project[] = [
     imageSrc: "/portfolio/eos/",
     typeExt:".png",
     totalCount:4,
+    timeSwitch: 2000,
     description:
 "Evolve OS، هو توزيعة Linux مصممة خصيصًا للفضاء السيبراني للمكتبات، ويمكن التحكم فيها من خلال خادم، تمامًا مثل EasyCafe",
     toolsUsed: ["Shell", "Python", "Vuejs", "Javascript","Dart","Html","Flutter","Postgresql"],
@@ -68,6 +70,7 @@ let allProjects: Project[] = [
     imageSrc: "/portfolio/aos/",
     typeExt:".png",
     totalCount:6,
+    timeSwitch: 2130,
     description:
     "نضام تشغيل مصغر, مخصص للبحث او للاشهارات, يقوم فقط بفتح صفحة ويب عن طريق برنامج SOS-OS",
     toolsUsed: ["C++", "Shell","Python"],
@@ -79,6 +82,7 @@ let allProjects: Project[] = [
     imageSrc: "/portfolio/sos_admin/",
     typeExt:".png",
     totalCount:9,
+    timeSwitch: 2250,
     description:
     "sos-admin، هو البرنامج المسؤول عن التحكم في نظام sos، الذي يمكنه تشغيل/إيقاف  أجهزة الكمبيوترالمحتوية علي sos-os من الشبكة.  و التحكم في ما يظهر على الشاشة.",
     toolsUsed: ["Php", "Python", "Postgresql", "WAMP","WebSocket","Javascript"],
@@ -90,6 +94,7 @@ let allProjects: Project[] = [
     imageSrc: "/portfolio/eparking/",
     typeExt:".jpg",
     totalCount:11,
+    timeSwitch: 2370,
     description:
     "Eparking هو تطبيق هاتفي يحل مشكلة مواقف السيارات للشركات وموظفيها",
     toolsUsed: ["Dart", "Flutter","FireBase","WAMP"],
@@ -101,6 +106,7 @@ let allProjects: Project[] = [
     imageSrc: "/portfolio/book_search/",
     typeExt:".jpg",
     totalCount:12,
+    timeSwitch: 2490,
     description:
     "EFindBook هو تطبيق ويب للبحث عن الكتب، ويستخدم واجهة Syngeb الخلفية، ويستخدم قاعدة بيانات OpenSearch للبحث بسرعة .",
     toolsUsed: ["Vue.js", "ElasticSearch","MySql","Python","HTML","CSS","Tailwind","Javascript"],
@@ -112,6 +118,7 @@ let allProjects: Project[] = [
     imageSrc: "/portfolio/wassiti_app/",
     typeExt:".png",
     totalCount:16,
+    timeSwitch: 2510,
     description:
     "Wassiti تطبيق عبارة عن شبكة اجتماعية للحرفين  ولحل مشاكلهم الإدارية من المنزل. ومساعدتهم في العثور على عمل وبيع المنتجاتهم.",
     toolsUsed: ["Dart", "Flutter"],
