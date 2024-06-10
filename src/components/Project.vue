@@ -84,7 +84,7 @@ const currentSlide = ref(1)
 
 function slideTo(val:number ) {
       currentSlide.value = val
-      console.log(currentSlide)
+      //console.log(currentSlide)
 }
 
 type Project = {
