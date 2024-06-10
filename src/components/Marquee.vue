@@ -4,13 +4,29 @@
   >
     <h3
       :class="store.coloredSite ? 'colored-text' : ''"
-      class="outlined-border bg-clip-text overflow-hidden whitespace-nowrap text-black text-8xl"
+      class="outlined-border bg-clip-text overflow-hidden whitespace-nowrap text-black text-8xl "
     >
+    <Vue3Marquee :pause-on-hover="true"
+        :gradient="true"
+        :gradient-color="[0, 0, 0]"
+        gradient-length="30%"
+        :clone="true" :duration="5" :direction="'reverse'" 
+        class="px-500px"
+        dir="ltr"
+    >
+      <span>
       مبرمج تطبيقات 
+      </span>
       <span
-        class="h-5 w-10 top-[-20px] inline-block rounded-full bg-black border border-white relative"
+        class="h-5 w-10 mx-[20px]  inline-block rounded-full bg-black border border-white relative"
       ></span>
+      <span>
       مهندس إحصاء
+      </span>
+      <span
+        class="h-5 w-10 mx-[20px]  inline-block rounded-full bg-black border border-white relative"
+      ></span>
+    </Vue3Marquee>
     </h3>
     <!-- <h3
       :class="store.coloredSite ? 'colored-text' : ''"
@@ -23,7 +39,15 @@
 
 <script lang="ts" setup>
 import useMainStore from "@/stores/main"
+import { Vue3Marquee } from 'vue3-marquee'
+  
+import { defineComponent } from 'vue'
 
+defineComponent({
+  components: {
+Vue3Marquee ,
+  },
+  })
 const store = useMainStore()
 </script>
 
