@@ -11,7 +11,7 @@
           :src="getImg(props.project.imageSrc + slide + props.project.typeExt)"
           alt="Project image"
           loading="lazy"
-          class="hover:grayscale-0 duration-300 rounded-lg h-200 w-[600px] object-contain transition"
+          class="hover:grayscale-0 duration-300 rounded-lg h-100 w-[600px] object-contain transition"
           :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
         />
         </div>

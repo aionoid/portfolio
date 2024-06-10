@@ -1,5 +1,5 @@
-<template >
-  <!-- <Cursor /> -->
+<template>
+  <Cursor />
   <Navbar />
   <Hero />
   <Marquee />

@@ -4,9 +4,7 @@
     :style="{
       width: cursorSize,
       height: cursorSize
-    }"
-    ref="cursor"
-  >
+    }" ref="cursor">
     <div class="h-2 w-2 bg-white rounded-full"></div>
   </div>
 </template>
@@ -19,9 +17,8 @@ let cursorSize = ref<number>(20)
 // const { x, y, sourceType } = useMouse()
 document.addEventListener("mousemove", (e) => {
   if (cursor.value) {
-    cursor.value.style.transform = `translate3d(${e.pageX + cursorSize.value - 85}px, ${
-      e.pageY - cursorSize.value - 20
-    }px, 0)`
+    cursor.value.style.transform = `translate3d(${- screen.availWidth + e.pageX + 90}px, ${e.pageY - cursorSize.value - 20
+      }px, 0)`
   }
 })
 
