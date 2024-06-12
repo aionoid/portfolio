@@ -1,5 +1,6 @@
 <template>
-  <nav class="bg-black pacity-50 flex fixed z-50 top-0 pt-10 px-10 left-0 right-0  justify-between items-center">
+  <nav
+    class="backdrop-blur-sm bg-black/30  pacity-50 flex fixed z-50 top-0 pb-5 pt-10 px-10 left-0 right-0  justify-between items-center">
     <span>
       <!-- <img src="/my-logo.webp" class="w-10" alt="My logo" /> -->
     </span>
