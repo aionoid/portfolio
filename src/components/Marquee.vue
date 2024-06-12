@@ -1,5 +1,6 @@
 <template>
-  <div class="marquee-text mt-32 flex whitespace-nowrap items-center justify-center w-max gap-10 overflow-hidden mx-[-80px]">
+  <div
+    class="marquee-text mb-20 mt-32 flex whitespace-nowrap items-center justify-center w-max gap-10 overflow-hidden mx-[-80px]">
     <h3 :class="store.coloredSite ? 'colored-text' : ''"
       class="outlined-border bg-clip-text overflow-hidden whitespace-nowrap text-black md:text-8xl text-5xl">
       <Vue3Marquee :pause-on-hover="true" :gradient="true" :gradient-color="[0, 0, 0]" gradient-length="30%"

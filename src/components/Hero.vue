@@ -1,6 +1,6 @@
 <template>
   <Stars />
-  <section class="mt-12 flex gap-56 items-center justify-center text-white">
+  <section class="mt-20 flex gap-56 items-center justify-center text-white">
     <!-- https://duckduckgo.com/i/b3480595911fb85f.png-->
     <div class="md:flex">
       <div class="md:shrink-0 px-20 mx-auto">
@@ -12,7 +12,7 @@
         <h3 class="text-7xl">بلعورة يعقوب</h3>
         <h5 class="text-sm font-['Poppins'] mt-7 w-[400px] leading-7">
           مرحبًا، أنا يعقوب أعمل كمهندس إحصاء، وأقوم بتطوير تطبيقات للجوال والويب وسطح المكتب وأنا من محبي Linux منذ عام
-          2005
+          2008
         </h5>
 
         <!-- //TODO: add youtube -->
