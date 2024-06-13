@@ -1,6 +1,6 @@
 <template>
   <section id="about-me-section" class="px-[12%] py-10 text-white mt-32 border rounded-md skills-wrapper relative">
-    <section class="flex flex-wrap justify-between mt-20">
+    <section class="flex flex-wrap justify-between mt-20  ">
       <!-- Left section -->
       <section>
         <canvas height="300" width="300" ref="modelCanvas" v-if="false"></canvas>
@@ -39,23 +39,23 @@
       </section>
       <!-- //TODO: add languages and framework logos here-->
       <!-- Right section -->
-      <section>
-        <h3 class="text-5xl">المهارات</h3>
+      <section class="">
+        <h3 class="text-5xl my-5">المهارات</h3>
         <h3 class="text-2xl mt-7">الواجهة</h3>
         <br />
-        <article class="flex items-start gap-10 skills">
+        <article class="flex flex-wrap items-start gap-10 skills">
           <SkillsBox v-for="skill in frontEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
         <h3 class="text-2xl mt-10">الواجهة الخلفية</h3>
         <br />
-        <article class="flex items-start gap-10 skills">
+        <article class="flex flex-wrap items-start gap-10 skills">
           <SkillsBox v-for="skill in backEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
         <h3 class="text-2xl mt-10">اخرى</h3>
         <br />
-        <article class="flex items-start gap-10 skills">
+        <article class="flex flex-wrap items-start gap-10 skills">
           <SkillsBox v-for="skill in deploymentSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
       </section>
@@ -81,117 +81,117 @@ watchEffect(() => {
 let frontEndSkills = [
   {
     name: "HTML",
-    logoSrc: "/html-logo.png"
+    logoSrc: "/portfolio/html-logo.png"
   },
   {
     name: "CSS",
-    logoSrc: "/css-logo.png"
+    logoSrc: "/portfolio/css-logo.png"
   },
   {
     name: "Javascript",
-    logoSrc: "/javascript-logo.png"
+    logoSrc: "/portfolio/javascript-logo.png"
   },
   {
     name: "Typescript",
-    logoSrc: "/typescript-logo.png"
+    logoSrc: "/portfolio/typescript-logo.png"
   },
   {
     name: "Vue.js",
-    logoSrc: "/vue-logo.png"
+    logoSrc: "/portfolio/vue-logo.png"
   },
   {
     name: "Flutter",
-    logoSrc: "/flutter-logo.svg"
+    logoSrc: "/portfolio/flutter-logo.svg"
   },
   {
     name: "Qt",
-    logoSrc: "/qt-1.svg"
+    logoSrc: "/portfolio/qt-1.svg"
   },
   {
     name: "Tailwind",
-    logoSrc: "/tailwind-logo.png"
+    logoSrc: "/portfolio/tailwind-logo.png"
   }
 ]
 
 let backEndSkills = [
   {
     name: "C++",
-    logoSrc: "/c.svg"
+    logoSrc: "/portfolio/c.svg"
   },
   {
     name: "Mongo DB",
-    logoSrc: "/mongo-db-logo.png"
+    logoSrc: "/portfolio/mongo-db-logo.png"
   },
   {
     name: "Firebase",
-    logoSrc: "/firebase-logo.png"
+    logoSrc: "/portfolio/firebase-logo.png"
   },
   {
     name: "MySQL",
-    logoSrc: "/mysql-logo.png"
+    logoSrc: "/portfolio/mysql-logo.png"
   },
   {
     name: "Postgresql",
-    logoSrc: "/postgresql.svg"
+    logoSrc: "/portfolio/postgresql.svg"
   },
   {
     name: "ElasticSearch",
-    logoSrc: "/elasticsearch.svg"
+    logoSrc: "/portfolio/elasticsearch.svg"
   },
   {
     name: "Dart",
-    logoSrc: "/dart.svg"
+    logoSrc: "/portfolio/dart.svg"
   },
   {
     name: "Go",
-    logoSrc: "/golang-1.svg"
+    logoSrc: "/portfolio/golang-1.svg"
   },
   {
     name: "Laravel",
-    logoSrc: "/laravel-2.svg"
+    logoSrc: "/portfolio/laravel-2.svg"
   },
   {
     name: "Python",
-    logoSrc: "/python-5.svg"
+    logoSrc: "/portfolio/python-5.svg"
   },
 ]
 
 let deploymentSkills = [
   {
     name: "XCP-ng",
-    logoSrc: "/xcp-ng.png"
+    logoSrc: "/portfolio/xcp-ng.png"
   },
   {
     name: "Github",
-    logoSrc: "/github-logo.png"
+    logoSrc: "/portfolio/github-logo.png"
   },
   {
     name: "Bash",
-    logoSrc: "/bash-2.svg"
+    logoSrc: "/portfolio/bash-2.svg"
   },
   {
     name: "Docker",
-    logoSrc: "/docker.svg"
+    logoSrc: "/portfolio/docker.svg"
   },
   {
     name: "Git",
-    logoSrc: "/git-bash.svg"
+    logoSrc: "/portfolio/git-bash.svg"
   },
   {
     name: "Protainer",
-    logoSrc: "/portainer.svg"
+    logoSrc: "/portfolio/portainer.svg"
   },
   {
     name: "Proxmox",
-    logoSrc: "/proxmox.svg"
+    logoSrc: "/portfolio/proxmox.svg"
   },
   {
     name: "VirtualBox",
-    logoSrc: "/virtualbox.svg"
+    logoSrc: "/portfolio/virtualbox.svg"
   },
   {
     name: "VMM",
-    logoSrc: "/vmm.png"
+    logoSrc: "/portfolio/vmm.png"
   },
 ]
 </script>
