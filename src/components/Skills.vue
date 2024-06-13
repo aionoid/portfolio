@@ -1,11 +1,12 @@
 <template>
   <section id="about-me-section" class="px-[12%] py-10 text-white mt-32 border rounded-md skills-wrapper relative">
-    <section class="flex flex-wrap justify-between mt-20  ">
+    <!-- <section class="flex flex-wrap justify-between mt-20  "> -->
+    <section class="flex  flex-col justify-between mt-20  ">
       <!-- Left section -->
-      <section>
+      <section class="basis-2/3 text-center mx-auto">
         <canvas height="300" width="300" ref="modelCanvas" v-if="false"></canvas>
         <h3 class="text-5xl">نبذة عني</h3>
-        <h5 class="w-auto max-w-[30rem]  leading-7 text-md font-light mt-7">
+        <h5 class="text-center mx-auto  w-auto max-w-[30rem]  leading-7 text-md font-light mt-7">
           أنا إحصائي بدوام كامل. أنا
           مهتم بتطوير الواجهة الأمامية وتصميم UX/UI. لدي خبرة في تطوير البرمجيات من خلال البرامج المختلفة التي قمت بها.
           لدي خبرة في HTML ,CSS ,Javascript ,Vue.js,Flutter, Qt, C++, QML، لدي أيضًا خبرة في الواجهة الخلفية
@@ -23,39 +24,41 @@
           <!-- <li>Favorite Language: Javascript</li> -->
         </ul>
         <!-- //TODO: add Resume.pdf -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 place-content-center">
         <a href="/portfolio/cv_en.pdf" download>
           <button
-            class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors">
+            class="hover:bg-white border hover:text-black  text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors">
             تحميل السيرة الذاتية بالانجليزية
           </button>
         </a>
-        <span class="mx-5"></span>
+        <!-- <span class="mx-5"></span> -->
         <a href="/portfolio/cv_ar.pdf" download>
           <button
-            class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors">
+            class="hover:bg-white border hover:text-black  text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors">
             تحميل السيرة الذاتية بالعربية
           </button>
         </a>
-      </section>
+        </div>
+      </section >
       <!-- //TODO: add languages and framework logos here-->
       <!-- Right section -->
-      <section class="">
-        <h3 class="text-5xl my-5">المهارات</h3>
+      <section  class="basis-1/3 text-center mx-auto justify-center">
+        <h3 class="text-5xl my-10">المهارات</h3>
         <h3 class="text-2xl mt-7">الواجهة</h3>
         <br />
-        <article class="flex flex-wrap items-start gap-10 skills">
+        <article class="flex flex-wrap  gap-10 justify-center skills">
           <SkillsBox v-for="skill in frontEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
         <h3 class="text-2xl mt-10">الواجهة الخلفية</h3>
         <br />
-        <article class="flex flex-wrap items-start gap-10 skills">
+        <article class="flex flex-wrap items-start gap-10 justify-center skills">
           <SkillsBox v-for="skill in backEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
         <h3 class="text-2xl mt-10">اخرى</h3>
         <br />
-        <article class="flex flex-wrap items-start gap-10 skills">
+        <article class="flex flex-wrap items-start gap-10  justify-center skills">
           <SkillsBox v-for="skill in deploymentSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
       </section>
