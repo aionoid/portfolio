@@ -53,11 +53,11 @@
           <SkillsBox v-for="skill in backEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
-        <!-- <h3 class="text-2xl mt-10">اخرى</h3>
+        <h3 class="text-2xl mt-10">اخرى</h3>
         <br />
         <article class="flex items-start gap-10 skills">
           <SkillsBox v-for="skill in deploymentSkills" :name="skill.name" :logo-src="skill.logoSrc" />
-        </article> -->
+        </article>
       </section>
     </section>
     <br /><br />
@@ -100,6 +100,14 @@ let frontEndSkills = [
     logoSrc: "/vue-logo.png"
   },
   {
+    name: "Flutter",
+    logoSrc: "/flutter-logo.svg"
+  },
+  {
+    name: "Qt",
+    logoSrc: "/qt-1.svg"
+  },
+  {
     name: "Tailwind",
     logoSrc: "/tailwind-logo.png"
   }
@@ -107,12 +115,8 @@ let frontEndSkills = [
 
 let backEndSkills = [
   {
-    name: "Node.js",
-    logoSrc: "/node-js-logo.png"
-  },
-  {
-    name: "Express.js",
-    logoSrc: "/express-logo.png"
+    name: "C++",
+    logoSrc: "/c.svg"
   },
   {
     name: "Mongo DB",
@@ -125,22 +129,70 @@ let backEndSkills = [
   {
     name: "MySQL",
     logoSrc: "/mysql-logo.png"
-  }
+  },
+  {
+    name: "Postgresql",
+    logoSrc: "/postgresql.svg"
+  },
+  {
+    name: "ElasticSearch",
+    logoSrc: "/elasticsearch.svg"
+  },
+  {
+    name: "Dart",
+    logoSrc: "/dart.svg"
+  },
+  {
+    name: "Go",
+    logoSrc: "/golang-1.svg"
+  },
+  {
+    name: "Laravel",
+    logoSrc: "/laravel-2.svg"
+  },
+  {
+    name: "Python",
+    logoSrc: "/python-5.svg"
+  },
 ]
 
 let deploymentSkills = [
   {
-    name: "Vercel",
-    logoSrc: "/vercel-logo.png"
+    name: "XCP-ng",
+    logoSrc: "/xcp-ng.png"
   },
   {
     name: "Github",
     logoSrc: "/github-logo.png"
   },
   {
-    name: "Trello",
-    logoSrc: "/trello-logo.png"
-  }
+    name: "Bash",
+    logoSrc: "/bash-2.svg"
+  },
+  {
+    name: "Docker",
+    logoSrc: "/docker.svg"
+  },
+  {
+    name: "Git",
+    logoSrc: "/git-bash.svg"
+  },
+  {
+    name: "Protainer",
+    logoSrc: "/portainer.svg"
+  },
+  {
+    name: "Proxmox",
+    logoSrc: "/proxmox.svg"
+  },
+  {
+    name: "VirtualBox",
+    logoSrc: "/virtualbox.svg"
+  },
+  {
+    name: "VMM",
+    logoSrc: "/vmm.png"
+  },
 ]
 </script>
 
