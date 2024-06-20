@@ -17,7 +17,7 @@ let cursorSize = ref<number>(20)
 // const { x, y, sourceType } = useMouse()
 document.addEventListener("mousemove", (e) => {
   if (cursor.value) {
-    cursor.value.style.transform = `translate3d(${- screen.availWidth + e.pageX + 90}px, ${e.pageY - cursorSize.value - 20
+    cursor.value.style.transform = `translate3d(${- screen.availWidth + e.pageX + 100}px, ${e.pageY - cursorSize.value - 110
       }px, 0)`
   }
 })

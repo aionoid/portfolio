@@ -10,7 +10,7 @@
       </div>
       <article class="hero-article">
         <h3 class="text-7xl">بلعورة يعقوب</h3>
-        <h5 class="text-sm font-['Poppins'] mt-7 w-[400px] leading-7">
+        <h5 class="text-sm mt-7 w-[400px] leading-7">
           السلام عليكم ورحمة الله وبركاته
           <br />
           اسمي يعقوب و أعمل كمهندس إحصاء، وأقوم بتطوير تطبيقات للجوال والويب وسطح المكتب وأنا من محبي Linux منذ عام
