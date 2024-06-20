@@ -6,6 +6,8 @@
         <canvas height="300" width="300" ref="modelCanvas" v-if="false"></canvas>
         <h3 class="text-5xl">نبذة عني</h3>
         <h5 class="w-auto max-w-[30rem]  leading-7 text-md font-light mt-7">
+          بسم الله الرحمن الرحيم والصلاة والسلام على أشرف الأنبياء و المرسلين
+          <br />
           أنا إحصائي بدوام كامل. أنا
           مهتم بتطوير الواجهة الأمامية وتصميم UX/UI. لدي خبرة في تطوير البرمجيات من خلال البرامج المختلفة التي قمت بها.
           لدي خبرة في HTML ,CSS ,Javascript ,Vue.js,Flutter, Qt, C++, QML، لدي أيضًا خبرة في الواجهة الخلفية
